@@ -1,3 +1,74 @@
-body {
-    background-color: grey;
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(204, 204, 204);
+}
+
+.grid-container {
+    display: grid;
+    height: 100dvh;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+    "dashboard header   header"
+    "dashboard projects announcements"
+    "dashboard projects trending";
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+.grid-container-item {
+    border: 1px solid black;
+}
+
+
+.header {
+    grid-area: header;
+}
+
+.flex-dashboard {
+    grid-area: dashboard;
+    background-color: rgb(66, 145, 209);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    color: white;
+    font-weight: bold;
+}
+
+.db-separator {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-size: 1.4rem;
+    row-gap: 20px;
+    align-items: center;
+
+}
+
+.db-logo {
+    justify-self: center;
+}
+
+.db-separator-1 {
+    
+}
+
+
+
+
+
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
